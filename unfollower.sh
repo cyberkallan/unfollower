@@ -21,7 +21,7 @@ grep -o '"id":"[0-9]\{10\}"' following_request.txt | cut -d '"' -f4 > following_
 for line in $(cat following_id); do
 printf "\e[1;77m[*] Trying to unfollow user id:\e[0m\e[1;93m %s\e[0m\n" $line
 
-{( trap '' SIGINT && unfollow=$(curl -b cookies.txt -H 'Cookie: csrftoken='$csrftoken'' -H 'X-Instagram-AJAX: 1' -H 'Referer: https://www.instagram.com/' -H 'X-CSRFToken:'$csrftoken'' -H 'X-Requested-With: XMLHttpRequest' "https://www.instagram.com/web/friendships/$line/unfollow/" -s -L --request POST | grep -o '"status": "ok"'); if [[ "$unfollow" == *'"status": "ok"'* ]]; then printf "\e[1;92m[*] User unfollowed. Sleeping 30 sec...\e[0m\n" ; sleep 30 ; else printf "\e[1;93m[!] User not unfollowed. Sleeping 5min\e[0m\n" ; sleep 300 ; fi )} & wait $!;
+{( trap '' SIGINT && unfollow=$(curl -b cookies.txt -H 'Cookie: csrftoken='$csrftoken'' -H 'X-Instagram-AJAX: 1' -H 'Referer: https://www.instagram.com/' -H 'X-CSRFToken:'$csrftoken'' -H 'X-Requested-With: XMLHttpRequest' "https://www.instagram.com/web/friendships/$line/unfollow/" -s -L --request POST | grep -o '"status": "ok"'); if [[ "$unfollow" == *'"status": "ok"'* ]]; then printf "\e[1;92m[*] User unfollowed. Sleeping 10 sec...\e[0m\n" ; sleep 10 ; else printf "\e[1;93m[!] User not unfollowed. Sleeping 5min\e[0m\n" ; sleep 300 ; fi )} & wait $!;
 
 done
 done
