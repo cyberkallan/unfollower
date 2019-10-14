@@ -1,5 +1,5 @@
-# Unfollower v1.0
-# Author: https://github.com/thelinuxchoice/unfollower
+# Unfollower v1.1
+# Author: https://github.com/cyberkallan/unfollower
 
 printf "\e[1;93m  _   _        __       _ _                         \n"
 printf " | | | |_ __  / _| ___ | | | _____      _____ _ __  \n"
