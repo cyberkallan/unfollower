@@ -5,8 +5,8 @@ printf "\e[1;93m  _   _        __       _ _                         \n"
 printf " | | | |_ __  / _| ___ | | | _____      _____ _ __  \n"
 printf " | | | | '_ \| |_ / _ \| | |/ _ \ \ /\ / / _ \ '__| \n"
 printf " | |_| | | | |  _| (_) | | | (_) \ V  V /  __/ |    \n"
-printf "  \___/|_| |_|_|  \___/|_|_|\___/ \_/\_/ \___|_|    \e[0m\n\n"
-printf "    \e[1;77mInstagram Unfollower, v1.0 by @linux_choice\e[0m\n\n"
+printf "  \___/|_| |_|_|  \___/|_|_|\___/ \_/\_/ \___|_|෴c͔ͣͦ́́͂ͅy͉̝͖̻̯ͮ̒̂ͮ͋ͫͨb͎̣̫͈̥̗͒͌̃͑̔̾ͅe̮̟͈̣̖̰̩̹͈̾ͨ̑͑r̼̯̤̈ͭ̃ͨ̆ k̲̱̠̞̖ͧ̔͊̇̽̿̑ͯͅa̘̫͈̭͌͛͌̇̇̍l͕͖͉̭̰ͬ̍ͤ͆̊ͨl͕͖͉̭̰ͬ̍ͤ͆̊ͨa̘̫͈̭͌͛͌̇̇̍n͉̠̙͉̗̺̋̋̔ͧ̊෴    \e[0m\n\n"
+printf "    \e[1;77mInstagram Unfollower, v1.0 by Cyber kallan\e[0m\n\n"
                                                    
 
 csrftoken=$(curl https://www.instagram.com/accounts/login/ajax -L -i -s | grep "csrftoken" | cut -d "=" -f2 | cut -d ";" -f1)
